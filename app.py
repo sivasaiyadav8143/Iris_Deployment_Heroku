@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model_pk = pickle.load(open("flower-v1.pkl","rb"))
+model_pk = pickle.load(open("flower.pkl","rb"))
 
 @app.route('/api_predict', methods = ['POST','GET'])
 def api_predict():
