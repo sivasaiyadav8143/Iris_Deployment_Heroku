@@ -13,12 +13,15 @@ def api_predict():
     elif request.method == 'POST':
         data = request.get_json()
         
-        se_le = data['sepal_length']
-        se_wi = data['sepal_width']
-        pe_le = data['petal_length']
-        pe_wi = data['petal_width']
+        sepal_length = data["sepal_length"]
+        sepal_width = data["sepal_width"]
+        petal_length = data["petal_length"]
+        petal_width = data["petal_width"]
+    
+        input_data = np.array([[sepal_length, sepal_width, 
+                          petal_length, petal_width]]
         
-        input_data = np.array([[se_le,se_wi,pe_le,pe_wi]])
+        #input_data = np.array([[se_le,se_wi,pe_le,pe_wi]])
         prediction = model_pk.predict(input_data)
         
         return str(prediction)
