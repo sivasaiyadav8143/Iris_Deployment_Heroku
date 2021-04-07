@@ -1,7 +1,7 @@
 from flask import Flask, request
 import pickle
 import numpy as np
-from sklearn.linear_model import LogisticRegression
+#from sklearn.linear_model import LogisticRegression
 
 app = Flask(__name__)
 
