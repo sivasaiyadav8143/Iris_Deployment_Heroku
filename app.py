@@ -4,11 +4,11 @@ import numpy as np
 
 app = Flask(__name__)
 
-model_pk = pickle.load(open('flower.pkl','rb'))
+model_pk = pickle.load(open("flower.pkl","rb"))
 
 @app.route('/api_predict',methods=['POST','GET'])
 def api_predict():
-    if request.method == "GET":
+    if request.method == 'GET':
         return "Please send a POST request"
     else:
         data = request.get_json()
