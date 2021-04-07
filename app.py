@@ -26,6 +26,6 @@ def api_predict():
         
         return str(prediction)
     
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
         
