@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 12 21:24:17 2020
-
-@author: PC
-"""
-
 from flask import Flask, request
 import pickle
 import numpy as np
