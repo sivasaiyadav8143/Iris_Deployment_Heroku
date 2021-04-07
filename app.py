@@ -10,7 +10,7 @@ model_pk = pickle.load(open('flower.pkl','rb'))
 def api_predict():
     if request.method == "GET":
         return "Please send a POST request"
-    else:
+    elif request.method == 'POST':
         data = request.get_json()
         
         se_le = data['sepal_length']
