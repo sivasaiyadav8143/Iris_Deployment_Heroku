@@ -6,17 +6,17 @@ app = Flask(__name__)
 
 model_pk = pickle.load(open('flower.pkl','rb'))
 
-@app.route('/api_predict',methods=["POST","GET"])
+@app.route('/api_predict',methods=['POST','GET'])
 def api_predict():
     if request.method == "GET":
         return "Please send a POST request"
     else:
         data = request.get_json()
         
-        se_le = data['sepal_length']
-        se_wi = data['sepal_width']
-        pe_le = data['petal_length']
-        pe_wi = data['petal_width']
+        se_le = data["sepal_length"]
+        se_wi = data["sepal_width"]
+        pe_le = data["petal_length"]
+        pe_wi = data["petal_width"]
         
         input_data = np.array([[se_le,se_wi,pe_le,pe_wi]])
         prediction = model_pk.predict(input_data)
