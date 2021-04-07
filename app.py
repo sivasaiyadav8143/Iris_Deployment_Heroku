@@ -19,11 +19,11 @@ def api_predict():
         pe_wi = data['petal_width']
         
         input_data = np.array([[se_le,se_wi,pe_le,pe_wi]])
-        prediction = model_pk.predict(input_data)[0]
+        prediction = model_pk.predict(input_data)
         
         return str(prediction)
     
-if __name__ == '__main__'
+if __name__ == "__main__"
     
     app.run()
         
