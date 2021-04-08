@@ -6,11 +6,12 @@ app = Flask(__name__)
 
 model_pk = pickle.load(open('flower.pkl','rb'))
 
-@app.route('/api_predict',methods=['POST','GET'])
+@app.route('/api_predict', methods=['POST','GET'])
 def api_predict():
     if request.method == 'GET':
         return "Please send a POST request"
     elif request.method == 'POST':
+		print("Hello" + str(request.get_json()))
         data = request.get_json()
         
         sepal_length = data["sepal_length"]
