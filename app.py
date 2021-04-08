@@ -11,7 +11,8 @@ def api_predict():
     if request.method == 'GET':
         return "Please send a POST request"
     elif request.method == 'POST':
-		print("Hello" + str(request.get_json()))
+	
+        print("Hello" + str(request.get_json()))
         data = request.get_json()
         
         sepal_length = data["sepal_length"]
